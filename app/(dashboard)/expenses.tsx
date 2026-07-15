@@ -9,30 +9,30 @@ import {
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
-import { getAllTrips } from '@/services/tripService';
+import { getAllEvents } from '@/services/eventService';
 import { useFocusEffect } from 'expo-router';
 
 const PRIMARY_COLOR = '#6366F1'; // Premium Indigo
 
 const Expenses = () => {
-  const [trips, setTrips] = useState<any[]>([]);
+  const [events, setEvents] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({ total: 0, booked: 0, count: 0 });
 
   const loadData = async () => {
     setLoading(true);
     try {
-      const data = await getAllTrips();
-      setTrips(data);
+      const data = await getAllEvents();
+      setEvents(data);
 
       // 🧮 Calculations:
       let totalBudget = 0;
       let bookedBudget = 0;
 
-      data.forEach((trip: any) => {
-        const b = Number(trip.budget) || 0;
+      data.forEach((event: any) => {
+        const b = Number(event.budget) || 0;
         totalBudget += b;
-        if (trip.isBooked) {
+        if (event.isBooked) {
           bookedBudget += b;
         }
       });
@@ -117,13 +117,13 @@ const Expenses = () => {
 
           {/* Budget Breakdown List */}
           <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>Trip Allocations</Text>
-            <Text style={styles.tripCount}>{stats.count} Trips</Text>
+            <Text style={styles.sectionTitle}>Event Allocations</Text>
+            <Text style={styles.tripCount}>{stats.count} Events</Text>
           </View>
 
-          {trips.length > 0 ? (
+          {events.length > 0 ? (
             <FlatList
-              data={trips}
+              data={events}
               renderItem={renderBudgetBreakdown}
               keyExtractor={(item) => item.id}
               scrollEnabled={false}
