@@ -66,8 +66,8 @@ const Login = () => {
               <View style={styles.iconBadge}>
                 <MaterialCommunityIcons name="map-marker-radius" size={40} color={PRIMARY_COLOR} />
               </View>
-              <Text style={styles.title}>TripMate</Text>
-              <Text style={styles.subtitle}>Let's plan your next adventure together</Text>
+              <Text style={styles.title}>EventMate</Text>
+              <Text style={styles.subtitle}>Let's plan your next event together</Text>
             </View>
 
             {/* Input Card */}

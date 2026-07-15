@@ -82,8 +82,8 @@ const Register = () => {
                 <View style={styles.iconBadge}>
                   <MaterialCommunityIcons name="account-plus-outline" size={40} color={PRIMARY_COLOR} />
                 </View>
-                <Text style={styles.title}>Join TripMate</Text>
-                <Text style={styles.subtitle}>Create an account to start tracking your journeys</Text>
+                <Text style={styles.title}>EventMate</Text>
+                <Text style={styles.subtitle}>Join us and plan your next event</Text>
               </View>
 
               {/* Register Card */}

@@ -14,8 +14,8 @@ const index = () => {
         
         <View style={styles.contentContainer}>
 
-          <Text style={[styles.appName, { color: '#6366F1' }]}>TripMate</Text>
-          <Text style={styles.tagline}>Plan your next adventure</Text>
+          <Text style={[styles.appName, { color: '#6366F1' }]}>EventMate</Text>
+          <Text style={styles.tagline}>Plan your next event</Text>
 
           <View style={styles.indicatorWrapper}>
 
