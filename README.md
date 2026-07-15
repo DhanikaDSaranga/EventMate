@@ -70,12 +70,5 @@ npx expo start -c
 ```
 Use your Expo Go app to scan the QR code and preview the application on your device!
 
-## 🎓 Academic Requirements Met
-- **Data Persistence & Authentication:** Successfully implemented via Firebase BaaS.
-- **State Management:** Efficiently handled via React Context (`AuthContext`, `LoaderContext`).
-- **Navigation:** Modern file-based routing using `expo-router`.
-- **Database Operations:** RESTful-style CRUD operations via Firebase Realtime Database SDK.
-- **Design & UI:** A unique, creative, and highly polished adaptation from the initial coursework templates, featuring dynamic components and premium aesthetics.
 
----
 *Developed by S.D. Dhanika D Saranga for final coursework submission.*
